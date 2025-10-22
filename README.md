@@ -1,4 +1,4 @@
-## 🧾 **README.md — Praktikum 5: JavaScript**
+# 🧾 Praktikum 5: JavaScript
 
 ### 👩‍💻 Identitas
 
@@ -14,20 +14,18 @@
 
 ---
 
-## 🧠 **Tujuan Praktikum**
+## 🎯 Tujuan Praktikum
 
-1. Mahasiswa mampu memahami sintaks dasar JavaScript.
-2. Mahasiswa mampu menggunakan JavaScript pada dokumen HTML.
-3. Mahasiswa mampu membuat kode JavaScript sederhana.
-4. Mahasiswa mampu melakukan manipulasi elemen HTML menggunakan JavaScript.
+1. Memahami sintaks dasar JavaScript.
+2. Menggunakan JavaScript di dalam dokumen HTML.
+3. Membuat kode JavaScript sederhana.
+4. Melakukan manipulasi elemen HTML menggunakan JavaScript.
 
 ---
 
-## ⚙️ **Langkah-Langkah Praktikum**
+## ⚙️ Langkah-Langkah Praktikum
 
 ### 🔹 **Latihan 1 – Document Write & Console Log**
-
-Kode:
 
 ```html
 <script>
@@ -37,7 +35,8 @@ Kode:
 ```
 
 **Penjelasan:**
-Kode menampilkan teks “Hello World” di halaman web dan di console browser.
+Menampilkan teks “Hello World” di halaman web dan di console browser.
+
 **Hasil:**
 ![Latihan 1](./screenshots/latihan1.png)
 
@@ -52,7 +51,8 @@ Kode menampilkan teks “Hello World” di halaman web dan di console browser.
 ```
 
 **Penjelasan:**
-Script menampilkan pesan pop-up menggunakan fungsi `window.alert()`.
+Menampilkan pesan pop-up menggunakan fungsi `window.alert()`.
+
 **Hasil:**
 ![Latihan 2](./screenshots/latihan2.png)
 
@@ -66,7 +66,8 @@ document.write("semoga sukses!");
 ```
 
 **Penjelasan:**
-Menampilkan dua baris teks menggunakan `document.write()` di dalam tag `<body>`.
+Menampilkan dua baris teks menggunakan `document.write()` di dalam `<body>`.
+
 **Hasil:**
 ![Latihan 3](./screenshots/latihan3.png)
 
@@ -81,6 +82,7 @@ document.write("hai, " + nama);
 
 **Penjelasan:**
 Mengambil input nama dari user menggunakan `prompt()` lalu menampilkannya.
+
 **Hasil:**
 ![Latihan 4](./screenshots/latihan4.png)
 
@@ -100,7 +102,8 @@ function pesan() {
 ```
 
 **Penjelasan:**
-Fungsi `pesan()` dipanggil otomatis saat halaman selesai dimuat.
+Fungsi `pesan()` dijalankan otomatis saat halaman selesai dimuat.
+
 **Hasil:**
 ![Latihan 5](./screenshots/latihan5.png)
 
@@ -124,7 +127,8 @@ function test(val1, val2) {
 ```
 
 **Penjelasan:**
-Program menampilkan hasil operasi aritmatika sederhana (perkalian, pembagian, dst).
+Menampilkan hasil dari operasi aritmatika dasar (perkalian, pembagian, penjumlahan, pengurangan, dan modulus).
+
 **Hasil:**
 ![Latihan 6](./screenshots/latihan6.png)
 
@@ -134,6 +138,7 @@ Program menampilkan hasil operasi aritmatika sederhana (perkalian, pembagian, ds
 
 ```html
 var nilai = prompt("nilai (0-100): ", 0);
+var hasil = "";
 if (nilai >= 60)
     hasil = "lulus";
 else
@@ -142,7 +147,8 @@ document.write("hasil: " + hasil);
 ```
 
 **Penjelasan:**
-Menentukan apakah user lulus atau tidak berdasarkan input nilai.
+Menentukan status kelulusan berdasarkan nilai input.
+
 **Hasil:**
 ![Latihan 7](./screenshots/latihan7.png)
 
@@ -165,24 +171,29 @@ function test() {
 ```
 
 **Penjelasan:**
-Menggunakan struktur `switch-case` untuk menampilkan teks sesuai input angka dari user.
+Menggunakan `switch-case` untuk menampilkan teks sesuai angka yang dimasukkan user.
+
 **Hasil:**
 ![Latihan 8](./screenshots/latihan8.png)
 
 ---
 
-### 🔹 **Latihan 9 – Pembuatan Form**
+### 🔹 **Latihan 9 – Input Form dan Button**
 
 ```html
-<form name="formku">
-  Nama: <input type="text" name="nama"><br>
-  Umur: <input type="number" name="umur"><br>
-  <input type="button" value="Tampilkan" onclick="tampilkanData()">
-</form>
+function test() {
+    var val1 = document.kirim.T1.value;
+
+    if (val1 % 2 == 0)
+        document.kirim.T2.value = "bilangan genap";
+    else
+        document.kirim.T2.value = "bilangan ganjil";
+}
 ```
 
 **Penjelasan:**
-Membuat form sederhana dengan tombol yang memanggil fungsi JavaScript untuk menampilkan data yang diinputkan user.
+User memasukkan bilangan ke form, lalu JavaScript menentukan apakah bilangan tersebut genap atau ganjil.
+
 **Hasil:**
 ![Latihan 9](./screenshots/latihan9.png)
 
@@ -191,28 +202,93 @@ Membuat form sederhana dengan tombol yang memanggil fungsi JavaScript untuk mena
 ### 🔹 **Latihan 10 – HTML DOM**
 
 ```html
-function hitung() {
+function hitungTotal() {
     var total = 0;
     if (document.getElementById("html").checked) total += 5000;
     if (document.getElementById("css").checked) total += 7000;
     if (document.getElementById("js").checked) total += 10000;
+
     document.getElementById("total").value = total;
 }
 ```
 
 **Penjelasan:**
-Menggunakan HTML DOM untuk mengambil nilai checkbox dan menghitung total otomatis.
+Menggunakan HTML DOM untuk menghitung total harga otomatis berdasarkan checkbox yang dipilih user.
+
 **Hasil:**
 ![Latihan 10](./screenshots/latihan10.png)
 
 ---
 
-## 📸 **Kesimpulan**
+## 🧩 **Pertanyaan dan Tugas**
 
-Dari praktikum ini, saya memahami:
+> Buat script untuk melakukan validasi pada isian form.
 
-* JavaScript dapat disisipkan dalam HTML untuk mengatur interaksi halaman web.
-* Fungsi seperti `alert()`, `prompt()`, `document.write()`, dan `switch()` digunakan untuk menampilkan serta memproses data.
-* JavaScript juga mampu memanipulasi elemen HTML secara dinamis melalui **HTML DOM**.
+**Kode:**
+
+```html
+<html>
+<head>
+    <title>Validasi Form</title>
+    <script language="javascript">
+        function validasi() {
+            var nama = document.formValidasi.nama.value;
+            var email = document.formValidasi.email.value;
+            var umur = document.formValidasi.umur.value;
+
+            if (nama == "" || email == "" || umur == "") {
+                alert("Semua field harus diisi!");
+                return false;
+            }
+
+            if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+                alert("Alamat email tidak valid!");
+                return false;
+            }
+
+            if (isNaN(umur)) {
+                alert("Umur harus berupa angka!");
+                return false;
+            }
+
+            alert("Form berhasil dikirim!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Form Validasi</h2>
+    <form name="formValidasi" onsubmit="return validasi()">
+        Nama: <input type="text" name="nama"><br><br>
+        Email: <input type="text" name="email"><br><br>
+        Umur: <input type="text" name="umur"><br><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
+```
+
+**Penjelasan:**
+
+* Mengecek apakah seluruh field sudah diisi sebelum form dikirim.
+* Memastikan email mengandung karakter `@` dan `.`.
+* Mengecek bahwa umur hanya boleh angka.
+* Jika valid, muncul pesan **“Form berhasil dikirim!”**.
+
+**Hasil:**
+![Validasi Form](./screenshots/validasi-form.png)
+
+---
+
+## 📚 **Kesimpulan**
+
+Dari praktikum ini, saya memahami bahwa:
+
+* JavaScript dapat digunakan untuk membuat halaman web lebih interaktif.
+* Fungsi seperti `alert()`, `prompt()`, `document.write()`, `if-else`, dan `switch()` memungkinkan logika sederhana di browser.
+* Melalui **HTML DOM**, JavaScript bisa berinteraksi langsung dengan elemen-elemen HTML.
+* Validasi form membantu mencegah input kosong atau salah sebelum dikirim ke server.
 
 ---
