@@ -1,0 +1,181 @@
+<!-- Latihan 1: document.write -->
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ <title>Mengenal JavaScript</title> 
+</head> 
+<body> 
+ <h1>Pengenalan JavaScript</h1> 
+ <h3>Contoh document.write dan console.log</h3> 
+ <script> 
+ document.write("Hello World"); 
+ console.log("Hello World"); 
+ </script> 
+</body> 
+</html>
+
+
+<!-- Latihan 2: alert -->
+<html>
+  <head>
+    <title>alert box</title>
+  </head>
+  <body>
+    <script language="javascript">
+      window.alert("ini merupakan pesan untuk anda!");
+    </script>
+  </body>
+</html>
+
+<!-- Latihan 3: skrip-->
+<html>
+    <head>
+        <title>skrip javascript</title>
+    </head>
+    <body>
+        percobaan memakai javascript:<br>
+        <script language = "javascript">
+            <!--
+                document.write("selamat mencoba javascript<br>");
+                document.write("semoga sukses!");
+                //-->
+        </script>
+    </body>
+</html>
+
+<!-- Latihan 4: pemasukan data-->
+<html>
+    <head>
+        <title>pemasukan data</title>
+    </head>
+    <body>
+        <script language = "javascript">
+            <!--
+                var nama = prompt("siapa nama anda?","masukkan nama anda!");
+                document.write("hai, " + nama);
+                //-->
+        </script>
+    </body>
+</html>
+
+<!-- Latihan 5: body onload-->
+<html>
+  <head>
+    <title>contoh program javaScript</title>
+    <script language="javascript">
+      function pesan() {
+        alert("memanggil javascript lewat body onload");
+      }
+    </script>
+  </head>
+  <body onload="pesan()">
+  </body>
+</html>
+
+<!-- Latihan 6: operasi dasar aritmatika-->
+<html>
+    <head>
+        <title>contoh program javascript</title> 
+
+        <script language="javascript">
+            function test (val1,val2)
+            {
+                document.write("<br>"+"perkalian : val1*val2 "+"<br>") 
+                document.write(val1*val2)
+                document.write("<br>"+"pembagian : val1/val2 "+"<br>")
+                document.write(val1/val2)
+                document.write("<br>"+"penjumlahan : val1+val2 "+"<br>")
+                document.write(val1+val2)
+                document.write("<br>"+"pengurangan : val1-val2 "+"<br>")
+                document.write(val1-val2)
+                document.write("<br>"+"modulus : val1%val2 "+"<br>")
+                document.write(val1%val2)
+            }
+            </script>
+        </head>
+        <body>
+             <input type="button" name="button1" value="arithemetic" onclick=test(9,4)>
+</body>
+</html>
+
+<!-- Latihan 7: seleksi kondisi if dan else-->
+<html>
+    <head>
+        <title>contoh if-else</title>
+    </head>
+    <body>
+        <script language="javascript">
+        <!--
+        var nilai = prompt("nilai (0-100): ", 0);
+        var hasil = "";
+        if (nilai >= 60)
+        hasil = "lulus";
+        else
+        hasil = "tidak lulus";
+        document.write("hasil: " + hasil);
+        //-->
+        </script>
+    </body>
+</html>
+
+<!-- Latihan 8: pengguanaan operator switch untuk seleksi kondisi-->
+<html>
+<head>
+    <title>contoh program javascript</title>
+    <script language="javascript">
+        function test() 
+        {
+            val1 = window.prompt("input nilai (1-5):")
+            switch (val1)
+            {
+                case "1" :
+                    document.write("bilangan satu")
+                    break
+                case "2" :
+                    document.write("bilangan dua")
+                    break
+                case "3" :
+                    document.write("bilangan tiga")
+                    break
+                case "4" :
+                    document.write("bilangan empat")
+                    break
+                case "5" :
+                    document.write("bilangan lima")
+                    break
+                default :
+                    document.write("bilangan lainnya")
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" name="button1" value="switch" onclick=test()>
+</body>
+</html>
+
+<!-- Latihan 9: input form dan button -->
+<html>
+<head>
+    <title>contoh form javascript</title>
+    <script language="javascript">
+        function test() {
+            var val1 = document.kirim.T1.value;
+            
+            if (val1 % 2 == 0)
+                document.kirim.T2.value = "bilangan genap";
+            else
+                document.kirim.T2.value = "bilangan ganjil";
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Menentukan Bilangan Genap atau Ganjil</h2>
+    <form name="kirim">
+        Masukkan bilangan: <input type="text" name="T1" size="20"><br><br>
+        <input type="button" value="Tampilkan" onclick="test()"><br><br>
+        Hasil: <input type="text" name="T2" size="20">
+    </form>
+</body>
+</html>
