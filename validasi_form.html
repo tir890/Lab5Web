@@ -1,0 +1,40 @@
+<!-- Validasi Form Input -->
+<html>
+<head>
+    <title>Validasi Form</title>
+    <script language="javascript">
+        function validasi() {
+            var nama = document.formValidasi.nama.value;
+            var email = document.formValidasi.email.value;
+            var umur = document.formValidasi.umur.value;
+
+            if (nama == "" || email == "" || umur == "") {
+                alert("Semua field harus diisi!");
+                return false;
+            }
+            if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+                alert("Alamat email tidak valid!");
+                return false;
+            }
+            if (isNaN(umur)) {
+                alert("Umur harus berupa angka!");
+                return false;
+            }
+
+            alert("Form berhasil dikirim!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Form Validasi</h2>
+    <form name="formValidasi" onsubmit="return validasi()">
+        Nama: <input type="text" name="nama"><br><br>
+        Email: <input type="text" name="email"><br><br>
+        Umur: <input type="text" name="umur"><br><br>
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
